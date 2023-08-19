@@ -1,0 +1,31 @@
+// C++ code
+//
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  if(Serial.available()>0)
+  {
+    int a=Serial.parseInt();
+    int b=Serial.parseInt();
+    int c=Serial.parseInt();
+    if(a>b&&a>c)
+    {
+      Serial.println(a);
+      Serial.println("is the largest number");
+    }
+    else if(b>c)
+    {
+      Serial.println(b);
+      Serial.println("is the largest number");
+    }
+    else
+    {
+      Serial.println(c);
+      Serial.println("is the largest number");
+    }
+  }
+}
